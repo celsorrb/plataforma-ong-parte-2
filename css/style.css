@@ -5,8 +5,8 @@
  */
 
 /* * Módulos 
- * CORRIGIDO: Removida a referência 'modules/' (que estava incorreta).
- * O style.css agora busca os arquivos modulares na mesma pasta (a pasta 'css/').
+ * CORREÇÃO APLICADA: Os caminhos agora são relativos à pasta 'css/',
+ * buscando os arquivos modulares diretamente.
  */
 @import url('_reset.css');
 @import url('_design-system.css');
