@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conheça nossos projetos sociais, descubra como ser voluntário e faça uma doação online para apoiar nossa causa.">
     <title>Projetos, Voluntariado e Doação - [Nome da ONG]</title>
+    
+    <base href="/plataforma-ong-parte-2/">
+    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,7 +15,7 @@
     
     <header>
         <div class="logo">
-            <img src="img/ong-logo.png" alt="Logotipo da ONG - Juntos Pela Causa">
+            <img src="img/ong-logo.png" alt="Logotipo da ONG - Juntos Pela Causa" width="50" height="50">
         </div>
         
         <button class="menu-toggle" aria-controls="navegacao-principal" aria-expanded="false" aria-label="Abrir Menu">☰</button>
@@ -21,91 +24,101 @@
             <ul>
                 <li><a href="index.html">Início</a></li>
                  <li class="dropdown">
-                    <a href="projetos.html" aria-current="page" role="button" aria-expanded="false">Projetos Sociais ▼</a>
+                    <a href="projetos.html" aria-current="page" aria-expanded="false">Projetos Sociais ▼</a>
                     <ul class="dropdown-content">
                         <li><a href="projetos.html#raizes">Raízes do Futuro</a></li>
                         <li><a href="projetos.html#conexao">Conexão Digital</a></li>
                     </ul>
                 </li>
-                <li><a href="#voluntariado">Voluntariado</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
-                <li><a href="#doacao" class="cta-header">Doar Agora</a></li>
+                <li><a href="cadastro.html">Seja Voluntário / Doador</a></li>
             </ul>
         </nav>
+        <a href="cadastro.html" class="cta-button cta-header">Doar Agora</a>
     </header>
 
     <main id="conteudo-principal">
-        <h1>Nossos Projetos e Formas de Ajuda</h1>
-        <p class="large-text">Aqui você encontra as principais iniciativas da [Nome da ONG] e todas as formas de se juntar à nossa causa: como voluntário ou como doador.</p>
+        <hgroup>
+            <h1>Nossos Projetos de Impacto Social</h1>
+            <p>Aqui você encontra todas as informações sobre como transformamos vidas.</p>
+        </hgroup>
 
         <section id="projetos-em-destaque">
             <h2>Projetos Atuais</h2>
-            
             <article class="projeto" id="raizes">
-                <div class="projeto-content">
-                    <h3>Projeto Raízes do Futuro</h3>
-                    <span class="badge badge-primaria">Meio Ambiente</span>
-                    <p>Focado em sustentabilidade e reflorestamento em áreas degradadas. Trabalhamos com a comunidade local para plantar espécies nativas, garantindo a biodiversidade e a saúde do ecossistema.</p>
-                    <div class="indicadores">
-                        <span><strong>+5.000</strong> Árvores plantadas</span>
-                        <span><strong>50+</strong> Voluntários ativos</span>
-                    </div>
+                <figure>
+                    <img src="img/projeto1.jpg" alt="Mãos plantando uma muda verde no solo, simbolizando sustentabilidade." width="400" height="250">
+                    <figcaption>Cuidado e plantio de mudas.</figcaption>
+                </figure>
+                <span class="badge badge-secundaria">Sustentabilidade</span>
+                <span class="badge badge-primaria">Em Andamento</span>
+                <h3>Projeto Raízes do Futuro</h3>
+                <p>Foco: **Sustentabilidade e Reflorestamento Comunitário.**</p>
+                <p>Descrição: Iniciativa que visa o plantio de árvores em áreas degradadas, educando a comunidade sobre a importância da biodiversidade. Nossos indicadores mostram que mais de 5.000 mudas foram plantadas no último ano.</p>
+                <div class="indicadores">
+                    <span aria-label="Impacto: 5000 árvores plantadas"><strong>Impacto:</strong> +5.000 Árvores</span>
+                    <span aria-label="Meta de Captação: 30 mil reais"><strong>Meta:</strong> R$ 30.000</span>
+                    <span aria-label="Progresso de 90 por cento"><strong>Progresso:</strong> 90%</span>
                 </div>
+                <a href="#" class="details-link">Ver detalhes e indicadores</a>
             </article>
 
             <article class="projeto" id="conexao">
-                <div class="projeto-content">
-                    <h3>Projeto Conexão Digital</h3>
-                    <span class="badge badge-secundaria">Educação e Inclusão</span>
-                    <p>Oferecemos cursos de informática, programação básica e internet segura para jovens de baixa renda. Nosso objetivo é reduzir o analfabetismo digital e prepará-los para o mercado de trabalho do futuro.</p>
-                    <div class="indicadores">
-                        <span><strong>+500</strong> Jovens impactados</span>
-                        <span><strong>15</strong> Laboratórios montados</span>
-                    </div>
+                <figure>
+                    <img src="img/projeto-educacao.jpg" alt="Criança negra levanta a mão para responder uma pergunta da professora em sala de aula." width="400" height="250">
+                    <figcaption>Aulas de Inclusão Digital.</figcaption>
+                </figure>
+                <span class="badge badge-alerta">Educação</span>
+                <span class="badge badge-secundaria">Novo</span>
+                <h3>Projeto Conexão Digital</h3>
+                <p>Foco: **Educação e Inclusão Digital.**</p>
+                <p>Descrição: Oferece cursos de tecnologia e acesso à internet para jovens em situação de vulnerabilidade. Nossos indicadores mostram que 85% dos participantes conseguiram o primeiro emprego.</p>
+                <div class="indicadores">
+                    <span aria-label="Impacto: mais de 500 jovens atendidos"><strong>Impacto:</strong> +500 Jovens</span>
+                    <span aria-label="Meta de Captação: 20 mil reais"><strong>Meta:</strong> R$ 20.000</span>
+                    <span aria-label="Progresso de 75 por cento"><strong>Progresso:</strong> 75%</span>
                 </div>
+                <a href="#" class="details-link">Ver detalhes e indicadores</a>
             </article>
         </section>
 
         <section id="voluntariado">
-            <h2>Seja um Voluntário Transformador</h2>
-            <p class="large-text">O voluntariado é o coração da nossa ONG. Encontre uma oportunidade que se encaixe nas suas habilidades e disponibilidade.</p>
+            <h2>Junte-se ao nosso time de Voluntários!</h2>
+            <p>O voluntariado é o coração da nossa ONG. Sua energia e tempo são fundamentais para o sucesso de nossos projetos. Temos diversas oportunidades, desde ações pontuais até apoio em gestão.</p>
             
             <details>
-                <summary>Tutor(a) em Conexão Digital</summary>
-                <p>Apoie nossas aulas de informática. Requisitos: Conhecimento básico em pacote Office ou programação.</p>
+                <summary>Oportunidades de Voluntariado Atuais</summary>
+                <ul>
+                    <li>Tutor(a) em Matemática (Online)</li>
+                    <li>Auxiliar de Eventos (Presencial)</li>
+                    <li>Designer Gráfico (Remoto)</li>
+                </ul>
+                <p>Interessado? <a href="cadastro.html" class="cta-link">Faça seu Cadastro como Voluntário</a>.</p>
             </details>
-            
-            <details>
-                <summary>Auxiliar de Eventos e Captação</summary>
-                <p>Ajude na organização de eventos, feiras e campanhas de arrecadação. Requisitos: Boa comunicação e proatividade.</p>
-            </details>
-            
-            <details>
-                <summary>Designer Gráfico Voluntário</summary>
-                <p>Ajude-nos na criação de materiais de divulgação para redes sociais e relatórios. Requisitos: Domínio em ferramentas de edição.</p>
-            </details>
-            
-            <p>Interessado? <a href="cadastro.html">Preencha nosso formulário de cadastro</a> para iniciar o processo seletivo!</p>
         </section>
-        
+
         <section id="doacao">
-            <h2>Doe e Faça a Diferença</h2>
+            <h2>Apoie Nossa Causa com uma Doação</h2>
             <p>Cada doação, por menor que seja, nos ajuda a manter e expandir o alcance de nossos projetos sociais. Sua contribuição é 100% aplicada em ações de impacto.</p>
             <form action="cadastro.html" method="get">
                 <fieldset>
                     <legend>Como você deseja contribuir?</legend>
+                    
                     <label for="valor-doacao">Valor Sugerido:</label>
                     <select id="valor-doacao" name="valor-sugerido">
                         <option value="50">R$ 50,00</option>
                         <option value="100">R$ 100,00</option>
                         <option value="outros">Outro Valor</option>
                     </select>
-                    <label>
-                        <input type="radio" name="tipo-doacao" value="unica" checked> Doação Única
-                    </label>
-                    <label>
-                        <input type="radio" name="tipo-doacao" value="mensal"> Doação Mensal
-                    </label>
+
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="tipo-doacao" value="unica" checked> Doação Única
+                        </label>
+                        <label>
+                            <input type="radio" name="tipo-doacao" value="mensal"> Doação Mensal
+                        </label>
+                    </div>
+
                     <p class="small-text">Ao clicar em "Doar Agora", você será redirecionado para nossa página de cadastro/pagamento seguro.</p>
                     <button type="submit" class="cta-button">Doar Agora</button>
                 </fieldset>
@@ -114,7 +127,8 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 [Nome da ONG]. Todos os direitos reservados. | <a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p>
+        <p>© 2024 [Nome da ONG]. Todos os direitos reservados. | <a href="#">Termos de Uso</a></p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
