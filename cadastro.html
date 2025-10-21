@@ -27,93 +27,65 @@
                         <li><a href="projetos.html#conexao">Conexão Digital</a></li>
                     </ul>
                 </li>
-                <li><a href="cadastro.html" aria-current="page">Seja Voluntário / Doador</a></li>
+                <li><a href="projetos.html#voluntariado">Voluntariado</a></li>
+                <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+                <li><a href="projetos.html#doacao" class="cta-header">Doar Agora</a></li>
             </ul>
         </nav>
-        <a href="cadastro.html" class="cta-button cta-header">Doar Agora</a>
     </header>
 
-    <main id="conteudo-principal">
-        <hgroup style="grid-column: 1 / -1;">
-            <h1>Faça Parte da Nossa Causa!</h1>
-            <p>Preencha o formulário abaixo para se cadastrar como Voluntário ou Doador/Apoiador.</p>
-        </hgroup>
-        
-        <form id="cadastroForm" action="#" method="post" style="grid-column: 1 / -1;">
-            <fieldset>
-                <legend>Informações Pessoais (Obrigatórias)</legend>
-                
-                <label for="nome_completo">Nome Completo: *</label>
-                <input type="text" id="nome_completo" name="nome_completo" 
-                       required minlength="5" maxlength="100" 
-                       title="Por favor, insira seu nome completo.">
-                
-                <label for="email">E-mail: *</label>
-                <input type="email" id="email" name="email" 
-                       required title="Insira um e-mail válido.">
-                
-                <label for="cpf">CPF: *</label>
-                <input type="text" id="cpf" name="cpf" 
-                       required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
-                       title="Formato de CPF: 000.000.000-00" placeholder="000.000.000-00">
-                
-                <label for="telefone">Telefone: *</label>
-                <input type="tel" id="telefone" name="telefone" 
-                       required pattern="\(\d{2}\) \d{4,5}-\d{4}" 
-                       title="Formato de Telefone: (00) 00000-0000 ou (00) 0000-0000" placeholder="(00) 00000-0000">
+    <main id="conteudo-principal" class="cadastro-page">
+        <h1>Formulário de Cadastro</h1>
+        <p class="large-text">Junte-se à [Nome da ONG]! Preencha seus dados para ser voluntário, doador ou apoiador.</p>
 
+        <form action="#" method="post" class="form-grid">
+            <fieldset class="dados-pessoais">
+                <legend>Seus Dados Pessoais</legend>
+                
+                <label for="nome">Nome Completo: *</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail: *</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="cpf">CPF: *</label>
+                <input type="text" id="cpf" name="cpf" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" placeholder="000.000.000-00" required>
+
+                <label for="telefone">Telefone (WhatsApp):</label>
+                <input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\)\s?\d{4,5}-?\d{4}" placeholder="(00) 99999-9999">
+                
                 <label for="data_nascimento">Data de Nascimento: *</label>
                 <input type="date" id="data_nascimento" name="data_nascimento" required>
             </fieldset>
 
-            <fieldset>
-                <legend>Endereço e Localização</legend>
-
+            <fieldset class="endereco">
+                <legend>Seu Endereço</legend>
+                
                 <label for="cep">CEP: *</label>
-                <input type="text" id="cep" name="cep" 
-                       required pattern="\d{5}-\d{3}" 
-                       title="Formato de CEP: 00000-000" placeholder="00000-000">
+                <input type="text" id="cep" name="cep" pattern="\d{5}-?\d{3}" placeholder="00000-000" required>
+
+                <label for="rua">Rua/Avenida: *</label>
+                <input type="text" id="rua" name="rua" required>
                 
-                <label for="endereco">Endereço (Rua, Número, Bairro): *</label>
-                <input type="text" id="endereco" name="endereco" required placeholder="Preenchimento automático após o CEP">
+                <label for="numero">Número: *</label>
+                <input type="text" id="numero" name="numero" required>
                 
+                <label for="complemento">Complemento:</label>
+                <input type="text" id="complemento" name="complemento">
+
                 <label for="cidade">Cidade: *</label>
-                <input type="text" id="cidade" name="cidade" required placeholder="Preenchimento automático após o CEP">
-                
+                <input type="text" id="cidade" name="cidade" required>
+
                 <label for="estado">Estado: *</label>
                 <select id="estado" name="estado" required>
-                    <option value="">Selecione...</option>
-                    <option value="AC">Acre</option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="BA">Bahia</option>
-                    <option value="CE">Ceará</option>
-                    <option value="DF">Distrito Federal</option>
-                    <option value="ES">Espírito Santo</option>
-                    <option value="GO">Goiás</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="PA">Pará</option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RR">Roraima</option>
-                    <option value="SC">Santa Catarina</option>
+                    <option value="">Selecione</option>
                     <option value="SP">São Paulo</option>
-                    <option value="SE">Sergipe</option>
-                    <option value="TO">Tocantins</option>
-                </select>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    </select>
             </fieldset>
-
-            <fieldset class="agrupamento-funcionalidade">
+            
+            <fieldset class="contribuicao-atividade">
                 <legend>Como Você Deseja Contribuir?</legend>
                 
                 <div style="grid-column: 1 / -1; display: flex; gap: 20px;">
@@ -142,8 +114,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 [Nome da ONG]. Seus dados estão seguros conosco.</p>
+        <p>&copy; 2024 [Nome da ONG]. Todos os direitos reservados. | <a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p>
     </footer>
-    <script src="js/script.js"></script>
 </body>
 </html>
