@@ -5,15 +5,14 @@
  */
 
 /* * Módulos 
- * CORREÇÃO: Removida importação de arquivo '_images.css' que não existe na estrutura.
+ * CORREÇÃO APLICADA: Removida a linha que importava '_images.css', pois o arquivo não existia.
  */
-
 @import url('_reset.css');         /* Deve ser o primeiro */
 @import url('_design-system.css');  /* Variáveis, Tokens */
 @import url('_base.css');           /* Estilos base (body, títulos, links) */
+@import url('_components.css');     /* Botões, Badges, etc. */
 @import url('_layout.css');         /* Estrutura principal (header, main, footer) */
 @import url('_navigation.css');     /* Menu e navegação */
-@import url('_components.css');     /* Botões, Badges, etc. */
 @import url('_pages.css');          /* Estilos de páginas específicas */
 
 /* Responsividade (Media Queries) */
