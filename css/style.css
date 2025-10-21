@@ -5,16 +5,16 @@
  */
 
 /* * Módulos 
- * CORREÇÃO APLICADA: Os caminhos agora são relativos à pasta 'css/',
- * buscando os arquivos modulares diretamente.
+ * CORREÇÃO: Removida importação de arquivo '_images.css' que não existe na estrutura.
  */
-@import url('_reset.css');
-@import url('_design-system.css');
-@import url('_base.css');
-@import url('_components.css');
-@import url('_layout.css');
-@import url('_navigation.css');
-@import url('_pages.css');
+
+@import url('_reset.css');         /* Deve ser o primeiro */
+@import url('_design-system.css');  /* Variáveis, Tokens */
+@import url('_base.css');           /* Estilos base (body, títulos, links) */
+@import url('_layout.css');         /* Estrutura principal (header, main, footer) */
+@import url('_navigation.css');     /* Menu e navegação */
+@import url('_components.css');     /* Botões, Badges, etc. */
+@import url('_pages.css');          /* Estilos de páginas específicas */
 
 /* Responsividade (Media Queries) */
-@import url('_responsive.css');
+@import url('_responsive.css');     /* Deve ser o último */
