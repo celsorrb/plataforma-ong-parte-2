@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Página de cadastro para Voluntários e Doadores. Preencha o formulário para fazer parte da nossa rede de apoio.">
     <title>Cadastro - Seja Voluntário ou Doador | [Nome da ONG]</title>
-    
-    <base href="/nome-do-seu-repositorio/">
-    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,7 +12,7 @@
 
     <header>
         <div class="logo">
-            <img src="img/ong-logo.png" alt="Logotipo da ONG - Juntos Pela Causa" width="50" height="50">
+            <img src="img/ong-logo.png" alt="Logotipo da ONG - Juntos Pela Causa">
         </div>
         
         <button class="menu-toggle" aria-controls="navegacao-principal" aria-expanded="false" aria-label="Abrir Menu">☰</button>
@@ -24,7 +21,7 @@
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li class="dropdown">
-                    <a href="projetos.html" aria-expanded="false">Projetos Sociais ▼</a>
+                    <a href="projetos.html" role="button" aria-expanded="false">Projetos Sociais ▼</a>
                     <ul class="dropdown-content">
                         <li><a href="projetos.html#raizes">Raízes do Futuro</a></li>
                         <li><a href="projetos.html#conexao">Conexão Digital</a></li>
@@ -37,36 +34,36 @@
     </header>
 
     <main id="conteudo-principal">
-        <hgroup>
+        <hgroup style="grid-column: 1 / -1;">
             <h1>Faça Parte da Nossa Causa!</h1>
             <p>Preencha o formulário abaixo para se cadastrar como Voluntário ou Doador/Apoiador.</p>
         </hgroup>
         
-        <form id="cadastroForm" action="#" method="post">
+        <form id="cadastroForm" action="#" method="post" style="grid-column: 1 / -1;">
             <fieldset>
                 <legend>Informações Pessoais (Obrigatórias)</legend>
                 
                 <label for="nome_completo">Nome Completo: *</label>
                 <input type="text" id="nome_completo" name="nome_completo" 
                        required minlength="5" maxlength="100" 
-                       title="Por favor, insira seu nome completo." autocomplete="name">
+                       title="Por favor, insira seu nome completo.">
                 
                 <label for="email">E-mail: *</label>
                 <input type="email" id="email" name="email" 
-                       required title="Insira um e-mail válido." autocomplete="email">
+                       required title="Insira um e-mail válido.">
                 
                 <label for="cpf">CPF: *</label>
                 <input type="text" id="cpf" name="cpf" 
                        required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
-                       title="Formato de CPF: 000.000.000-00" placeholder="000.000.000-00" autocomplete="off">
+                       title="Formato de CPF: 000.000.000-00" placeholder="000.000.000-00">
                 
                 <label for="telefone">Telefone: *</label>
                 <input type="tel" id="telefone" name="telefone" 
                        required pattern="\(\d{2}\) \d{4,5}-\d{4}" 
-                       title="Formato de Telefone: (00) 00000-0000 ou (00) 0000-0000" placeholder="(00) 00000-0000" autocomplete="tel-national">
+                       title="Formato de Telefone: (00) 00000-0000 ou (00) 0000-0000" placeholder="(00) 00000-0000">
 
                 <label for="data_nascimento">Data de Nascimento: *</label>
-                <input type="date" id="data_nascimento" name="data_nascimento" required autocomplete="bday">
+                <input type="date" id="data_nascimento" name="data_nascimento" required>
             </fieldset>
 
             <fieldset>
@@ -75,16 +72,16 @@
                 <label for="cep">CEP: *</label>
                 <input type="text" id="cep" name="cep" 
                        required pattern="\d{5}-\d{3}" 
-                       title="Formato de CEP: 00000-000" placeholder="00000-000" autocomplete="postal-code">
+                       title="Formato de CEP: 00000-000" placeholder="00000-000">
                 
                 <label for="endereco">Endereço (Rua, Número, Bairro): *</label>
-                <input type="text" id="endereco" name="endereco" required placeholder="Preenchimento automático após o CEP" autocomplete="street-address">
+                <input type="text" id="endereco" name="endereco" required placeholder="Preenchimento automático após o CEP">
                 
                 <label for="cidade">Cidade: *</label>
-                <input type="text" id="cidade" name="cidade" required placeholder="Preenchimento automático após o CEP" autocomplete="address-level2">
+                <input type="text" id="cidade" name="cidade" required placeholder="Preenchimento automático após o CEP">
                 
                 <label for="estado">Estado: *</label>
-                <select id="estado" name="estado" required autocomplete="address-level1">
+                <select id="estado" name="estado" required>
                     <option value="">Selecione...</option>
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
@@ -119,7 +116,7 @@
             <fieldset class="agrupamento-funcionalidade">
                 <legend>Como Você Deseja Contribuir?</legend>
                 
-                <div class="checkbox-group">
+                <div style="grid-column: 1 / -1; display: flex; gap: 20px;">
                     <label>
                         <input type="checkbox" id="voluntario" name="interesse" value="voluntario"> Desejo ser Voluntário
                     </label>
@@ -137,7 +134,7 @@
 
             <div class="termos">
                 <input type="checkbox" id="aceite_termos" name="aceite_termos" required>
-                <label for="aceite_termos">Li e aceito os <a href="#" target="_blank" rel="noopener noreferrer">Termos de Uso e Política de Privacidade</a>. *</label>
+                <label for="aceite_termos">Li e aceito os <a href="#" target="_blank">Termos de Uso e Política de Privacidade</a>. *</label>
             </div>
 
             <button type="submit" class="cta-button">Enviar Cadastro</button>
@@ -145,7 +142,7 @@
     </main>
 
     <footer>
-        <p>© 2024 [Nome da ONG]. Seus dados estão seguros conosco.</p>
+        <p>&copy; 2024 [Nome da ONG]. Seus dados estão seguros conosco.</p>
     </footer>
     <script src="js/script.js"></script>
 </body>
